@@ -3,11 +3,14 @@ import java.text.DecimalFormat;
 
 public class calculator {
 
-  static int addition(int a, int b){
+  static int add(int a, int b){
     return a + b;
   }
-  static int subtraction(int a, int b){
+  static int subtract(int a, int b){
     return a - b;
+  }
+  static int multiply(int a, int b){
+    return a * b;
   }
   public static void main(String[] args) {
     Scanner opin = new Scanner(System.in);
@@ -20,7 +23,7 @@ public class calculator {
       int A1 = addIn1.nextInt();
       Scanner addIn2 = new Scanner(System.in);
       int A2 = addIn2.nextInt();
-      System.out.println(addition(A1, A2));
+      System.out.println(add(A1, A2));
       break;
     case "2":
       System.out.println("What numbers do you want to subtract?");
@@ -28,8 +31,15 @@ public class calculator {
       int S1 = subIn1.nextInt();
       Scanner subIn2 = new Scanner(System.in);
       int S2 = subIn2.nextInt();
-      System.out.println(subtraction(S1, S2));
+      System.out.println(subtract(S1, S2));
+      break;
     case "3":
+    System.out.println("What numbers do you want to muliply?");
+    Scanner multIn1 = new Scanner(System.in);
+    int M1 = multIn1.nextInt();
+    Scanner multIn2 = new Scanner(System.in);
+    int M2 = multIn2.nextInt();
+    System.out.println(multiply(M1, M2));
     case "4":
       }
     }
