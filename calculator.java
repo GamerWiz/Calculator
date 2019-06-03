@@ -12,6 +12,9 @@ public class calculator {
   static int multiply(int a, int b){
     return a * b;
   }
+  static int divide(int a, int b){
+    return a / b
+  }
   public static void main(String[] args) {
     Scanner opin = new Scanner(System.in);
     System.out.println("What operation would you like to do? [1] = +, [2]= -, [3] = *, [4] = /, [n] = exit");
@@ -41,6 +44,9 @@ public class calculator {
     int M2 = multIn2.nextInt();
     System.out.println(multiply(M1, M2));
     case "4":
+        }
+      catch (Exception e){
+        System.out.println("Something went wrong");
       }
     }
   }
