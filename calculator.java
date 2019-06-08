@@ -12,8 +12,9 @@ public class calculator {
   static int multiply(int a, int b){
     return a * b;
   }
-  static int divide(int a, int b){
-    return a / b;
+  static double divide(int a, int b){
+    double quotient = (double) a/b;
+    return quotient;
   }
   public static void main(String[] args) {
     DecimalFormat trunc = new DecimalFormat("#.000");
@@ -38,20 +39,19 @@ public class calculator {
       System.out.println(subtract(S1, S2));
       break;
     case "3":
-    System.out.println("What numbers do you want to muliply?");
-    Scanner multIn1 = new Scanner(System.in);
-    int M1 = multIn1.nextInt();
-    Scanner multIn2 = new Scanner(System.in);
-    int M2 = multIn2.nextInt();
-    System.out.println(multiply(M1, M2));
+      System.out.println("What numbers do you want to muliply?");
+      Scanner multIn1 = new Scanner(System.in);
+      int M1 = multIn1.nextInt();
+      Scanner multIn2 = new Scanner(System.in);
+      int M2 = multIn2.nextInt();
+      System.out.println(multiply(M1, M2));
     case "4":
-    System.out.println("What numbers do you want to divide?");
-    Scanner divIn1 = new Scanner(System.in);
-    int D1 = divIn1.nextInt();
-    Scanner divIn2 = new Scanner(System.in);
-    int D2 = divIn2.nextInt();
-    double quotient = (double) divide(D1, D2);
-    System.out.println(trunc.format(quotient));
+      System.out.println("What numbers do you want to divide?");
+      Scanner divIn1 = new Scanner(System.in);
+      int D1 = divIn1.nextInt();
+      Scanner divIn2 = new Scanner(System.in);
+      int D2 = divIn2.nextInt();
+      System.out.println(trunc.format(divide(D1, D2)));
     }
   }
 }
