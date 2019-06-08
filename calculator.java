@@ -13,7 +13,7 @@ public class calculator {
     return a * b;
   }
   static int divide(int a, int b){
-    return a / b
+    return a / b;
   }
   public static void main(String[] args) {
     Scanner opin = new Scanner(System.in);
@@ -44,9 +44,12 @@ public class calculator {
     int M2 = multIn2.nextInt();
     System.out.println(multiply(M1, M2));
     case "4":
-        }
-      catch (Exception e){
-        System.out.println("Something went wrong");
-      }
+    System.out.println("What numbers do you want to divide?");
+    Scanner divIn1 = new Scanner(System.in);
+    int D1 = divIn1.nextInt();
+    Scanner divIn2 = new Scanner(System.in);
+    int D2 = divIn2.nextInt();
+    System.out.println(divide(D1, D2));
     }
   }
+}
