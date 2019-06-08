@@ -16,6 +16,7 @@ public class calculator {
     return a / b;
   }
   public static void main(String[] args) {
+    DecimalFormat trunc = new DecimalFormat("#.000");
     Scanner opin = new Scanner(System.in);
     System.out.println("What operation would you like to do? [1] = +, [2]= -, [3] = *, [4] = /, [n] = exit");
     String originalOp = opin.nextLine();
@@ -49,7 +50,8 @@ public class calculator {
     int D1 = divIn1.nextInt();
     Scanner divIn2 = new Scanner(System.in);
     int D2 = divIn2.nextInt();
-    System.out.println(divide(D1, D2));
+    double quotient = (double) divide(D1, D2);
+    System.out.println(trunc.format(quotient));
     }
   }
 }
